@@ -1,9 +1,10 @@
-package Test;
-import Main.Student;
-import Main.*;
+package it.unimol;
+import  it.unimol.app.*;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestClasses {
     @Test

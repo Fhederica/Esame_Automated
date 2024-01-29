@@ -1,6 +1,4 @@
-package Main;
-
-import Main.Classroom;
+package it.unimol.app;
 
 import java.util.ArrayList;
 import java.util.List;

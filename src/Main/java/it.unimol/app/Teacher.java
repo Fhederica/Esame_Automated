@@ -1,4 +1,5 @@
-package Main;
+package it.unimol.app;
+
 
 public class Teacher {
     private String name;
