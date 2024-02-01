@@ -142,11 +142,12 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>target/classes/</classpathPrefix>
-                            <mainClass>src/main/java/it/unimol/Main.java</mainClass>
+                            <mainClass>it.unimol.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
+
 
             <!-- Maven Site Plugin for generating project site with documentation and reports -->
             <plugin>
