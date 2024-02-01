@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+        "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<module name="Checker">
+    <module name="TreeWalker">
+        <!-- Regola per evitare gli import con asterisco (*) -->
+        <module name="AvoidStarImport"/>
+
+        <!-- Regola per controllare gli import non utilizzati -->
+        <module name="UnusedImports"/>
+
+        <!-- Aggiunta di regola per richiedere parentesi graffe per i blocchi di istruzioni a una singola riga -->
+        <module name="NeedBraces"/>
+
+        <!-- Regola per controllare e correggere la formattazione degli spazi attorno alle parentesi -->
+        <module name="WhitespaceAround">
+            <property name="allowEmptyConstructors" value="true"/>
+        </module>
+
+        <!-- Regola per richiedere parentesi graffe per i blocchi di istruzioni a una singola riga -->
+        <module name="NeedBraces">
+            <property name="severity" value="warning"/>
+        </module>
+
+        <!-- Regola per controllare la presenza di Javadoc per i metodi -->
+        <module name="JavadocMethod">
+            <property name="severity" value="warning"/>
+        </module>
+
+        <!-- Regola per controllare la presenza di Javadoc per le classi e le interfacce -->
+        <module name="JavadocType">
+            <property name="severity" value="warning"/>
+        </module>
+
+        <!-- Regola per controllare la presenza di Javadoc per le variabili -->
+        <module name="JavadocVariable">
+            <property name="severity" value="warning"/>
+        </module>
+
+        <!-- Regola per controllare blocchi di codice vuoti -->
+        <module name="EmptyBlock">
+            <property name="severity" value="warning"/>
+        </module>
+
+        <!-- Regola per aggiungere spazi attorno alle parentesi -->
+        <module name="ParenPad">
+            <property name="severity" value="warning"/>
+        </module>
+
+    </module>
+</module>
