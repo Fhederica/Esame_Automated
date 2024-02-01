@@ -8,10 +8,10 @@ RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/
 
 
-
+ARG GIT_TOKEN
 RUN apt-get update \
     && apt-get install -y git \
-    && git clone https://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@github.com/Fhederica/Esame_Automated.git
+    && git clone https://${GIT_TOKEN}@github.com/Fhederica/Esame_Automated.git
 
 
 WORKDIR /Esame_Automated

@@ -1,4 +1,8 @@
 version: '3.8'
 services:
   project:
-    build: "."
+    build:
+      context: .
+      args:
+        - GIT_TOKEN=${GIT_TOKEN}
+    #restart: always
