@@ -141,7 +141,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>target/classes/</classpathPrefix>
-                            <mainClass>it.unimol.Main</mainClass>
+                            <mainClass>it.unimol.app.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
