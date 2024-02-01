@@ -159,20 +159,11 @@
                 <version>3.7.1</version>
             </plugin>
 
-
             <!-- Maven Project Info Reports Plugin for generating various project information reports -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>3.0.0</version>
-            </plugin>
-
-
-            <!-- Maven PMD Plugin for static code analysis -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.20.0</version>
             </plugin>
 
         </plugins>
