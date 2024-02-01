@@ -7,6 +7,8 @@
     <artifactId>progetto</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>progetto</name>
+
     <!-- Defines project properties for Maven.-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,6 +47,7 @@
 
     <build>
         <plugins>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -54,7 +57,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-
+        -->
 
             <!--coverage test-->
             <plugin>
@@ -135,6 +138,7 @@
 
             <!-- Creating an executable JAR file during the Maven build process -->
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
                 <configuration>
@@ -176,4 +180,49 @@
 
     </build>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.20.0</version>
+                <configuration>
+
+                    <inputEncoding>utf-8</inputEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <targetJdk>1.5</targetJdk>
+                    <excludes>
+                        <exclude>**/*Bean.java</exclude>
+                        <exclude>**/generated/*.java</exclude>
+                    </excludes>
+                    <excludeRoots>
+                        <excludeRoot>target/generated-sources/stubs</excludeRoot>
+                    </excludeRoots>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>pmd</report>
+                            <report>cpd</report>
+                        </reports>
+                    </reportSet>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <inherited>false</inherited>
+                        <reports>
+                            <report>aggregate-pmd</report>
+                            <report>aggregate-cpd</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.7.3.0</version>
+            </plugin>
+
+        </plugins>
+    </reporting>
 </project>
