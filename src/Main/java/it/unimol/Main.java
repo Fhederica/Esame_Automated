@@ -1,5 +1,9 @@
-package it.unimol.app;
-import it.unimol.app.ui.UI;
+package it.unimol;
+
+import it.unimol.app.Classroom;
+import it.unimol.app.School;
+import it.unimol.app.Teacher;
+import it.unimol.ui.UI;
 
 public class Main {
     public static void main(String[] args) {

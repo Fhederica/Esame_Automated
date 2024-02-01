@@ -1,9 +1,10 @@
-package it.unimol.app.ui;
+package it.unimol.ui;
 
 import it.unimol.app.Classroom;
-import it.unimol.app.School;
 import it.unimol.app.Student;
 import it.unimol.app.Teacher;
+import it.unimol.app.School;
+
 import java.util.Scanner;
 
 public class UI {

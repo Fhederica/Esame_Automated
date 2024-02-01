@@ -1,5 +1,8 @@
 package it.unimol;
-import  it.unimol.app.*;
+import it.unimol.app.Classroom;
+import it.unimol.app.School;
+import it.unimol.app.Student;
+import it.unimol.app.Teacher;
 import org.junit.Test;
 
 
