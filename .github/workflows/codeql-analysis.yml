@@ -5,7 +5,8 @@ on:
     branches: [ "master" ]
 
   schedule:
-    - cron: '0 6 * * 1'  # Run every Monday at 6 AM
+    - cron: '40 14 * * 6' # pianificazione del controllo generato casualmente. Avverrà ogni sabato alle 14:40
+
 jobs:
   analyze:
     name: Analyze
@@ -16,22 +17,17 @@ jobs:
       matrix:
         language: [ 'java' ]
 
-    steps:       
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Clean CodeQL cache
-        run: |
-          git clean -fdX
-          rm -rf $RUNNER_TOOL_CACHE/CodeQL
-          
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: ${{ matrix.language }}
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
 
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v2
 
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
