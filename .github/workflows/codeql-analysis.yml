@@ -25,9 +25,14 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
+        token: ${{ secrets.CODEQL_TOKEN }}  # Usa il segreto appena creato come token
+        # Aggiungi altri parametri se necessario
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v2
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+      with:
+        token: ${{ secrets.CODEQL_TOKEN }}  # Usa il segreto appena creato come token
+ 
