@@ -25,12 +25,9 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
-        queries: ${{ matrix.language }}/path/to/your/queries
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v2
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
-      with:
-        queries: ${{ matrix.language }}/path/to/your/queries
