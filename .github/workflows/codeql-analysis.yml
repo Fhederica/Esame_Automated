@@ -19,22 +19,18 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
-        token: ${{ secrets.CODEQL_TOKEN }}  # Usa il segreto appena creato come token
-        # Aggiungi altri parametri se necessario
+        queries: ${{ matrix.language }}/path/to/your/queries
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v2
 
-    - name: Upload CodeQL Results
-      uses: github/codeql-action/upload-sarif@v1
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
       with:
-        sarif_file: /home/runner/work/Esame_Automated/results/java.sarif
-        token: ${{ secrets.GITHUB_TOKEN }}
-
- 
+        queries: ${{ matrix.language }}/path/to/your/queries
