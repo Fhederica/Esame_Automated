@@ -3,6 +3,4 @@ services:
   project:
     build:
       context: .
-      args:
-        - GIT_TOKEN=${GIT_TOKEN}
-    #restart: always
+      #restart: always

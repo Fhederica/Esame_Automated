@@ -7,13 +7,10 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/
 
-#Token di accesso Git
-ARG GIT_TOKEN
-
-#Clona il repository utilizzando il token di accesso Git
+#Clona il repository
 RUN apt-get update \
     && apt-get install -y git \
-    && git clone https://${GIT_TOKEN}@github.com/Fhederica/Esame_Automated.git
+    && git clone https://github.com/Fhederica/Esame_Automated.git
 
 #Imposta la directory di lavoro nel repository clonato
 WORKDIR /Esame_Automated
