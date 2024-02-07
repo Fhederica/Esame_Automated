@@ -1,33 +1,33 @@
 name: "CodeQL"
 
+#Il workflow viene attivato sia da un evento di push sul ramo master che da
+#una pianificazione settimanale, eseguendosi ogni lunedì alle 6 del mattino
 on:
-  push:
-    branches: [ "master" ]
+  push: 
+    branches: [ "master" ] 
+  schedule: 
+    - cron: '0 6 * * 1'  
 
-  schedule:
-    - cron: '40 14 * * 6' # pianificazione del controllo generato casualmente. Avverrà ogni sabato alle 14:40
-
+#Il lavoro che verrà eseguito è analyze
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        language: [ 'java' ]
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
+      
+      #Inizializzazione di CodeQL con codice java
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
-        languages: ${{ matrix.language }}
+        languages: 'java'
 
+      #Compila il codice del progetto
     - name: Autobuild
       uses: github/codeql-action/autobuild@v2
-
+    
+      #Esegue l'analisi statica del codice utilizzando CodeQL
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
