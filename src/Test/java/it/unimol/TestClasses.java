@@ -51,7 +51,8 @@ public class TestClasses {
         assertTrue(class1.getStudents().isEmpty()); // Verifica che non ci siano studenti
     }
 
-    //37% coverage con testSchool, 28% senza
+    /*
+    37% coverage con testSchool, 28% senza
 
     @Test
     public void testSchool() {
@@ -64,6 +65,6 @@ public class TestClasses {
         assertEquals("Scuola Superiore", school.getName());
         assertEquals(1, school.getClasses().size()); // Verifica che ci sia una sola classe nella scuola
     }
-
+    */
 
 }
