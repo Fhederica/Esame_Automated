@@ -13,7 +13,10 @@ public class School {
     }
 
     public void addClass(Classroom aClass) {
-        this.classes.add(aClass);
+        this.classes.add(new Classroom(aClass.getName(), aClass.getTeacher()));
+        for (Student student : aClass.getStudents()) {
+            this.classes.get(this.classes.size() - 1).addStudent(student);
+        }
     }
 
     public String getName() {
@@ -25,11 +28,11 @@ public class School {
     }
 
     public List<Classroom> getClasses() {
-        return classes;
+        return new ArrayList<>(classes);
     }
 
     public void setClasses(List<Classroom> classes) {
-        this.classes = classes;
+        this.classes = new ArrayList<>(classes);
     }
 
     @Override

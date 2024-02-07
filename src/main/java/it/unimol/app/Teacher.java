@@ -1,6 +1,8 @@
 package it.unimol.app;
 
 
+import java.util.Objects;
+
 public class Teacher {
     private String name;
     private int id;
@@ -46,5 +48,21 @@ public class Teacher {
                 ", subject='" + subject + '\'' +
                 '}';
     }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Teacher teacher = (Teacher) obj;
+        return id == teacher.id &&
+                Objects.equals(name, teacher.name) &&
+                Objects.equals(subject, teacher.subject);
+    }
+
 
 }
