@@ -8,11 +8,22 @@ import it.unimol.app.School;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
+/**
+ * La classe UI fornisce metodi per interagire con l'utente e creare istanze di studenti, docenti, classi e scuole.
+ */
 public class UI {
 
+    /**
+     * Crea un nuovo oggetto UI.
+     */
     public UI() {
     }
 
+    /**
+     * Crea un nuovo studente chiedendo all'utente di inserire il nome, il cognome e il codice dello studente.
+     *
+     * @return Lo studente creato.
+     */
     public Student createStudent() {
         Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8.name());
         System.out.println("Inserisci il nome dello studente:");
@@ -26,6 +37,11 @@ public class UI {
         return new Student(name, code, surname);
     }
 
+    /**
+     * Crea un nuovo docente chiedendo all'utente di inserire il nome, la materia e l'ID del docente.
+     *
+     * @return Il docente creato.
+     */
     public Teacher createTeacher() {
         Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8.name());
         System.out.println("Inserisci il nome del docente:");
@@ -39,6 +55,12 @@ public class UI {
         return new Teacher(name, id, subject);
     }
 
+    /**
+     * Crea una nuova classe chiedendo all'utente di inserire il nome e utilizzando il docente specificato.
+     *
+     * @param teacher Il docente della classe.
+     * @return La classe creata.
+     */
     public Classroom createClassroom(Teacher teacher) {
         Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8.name());
         System.out.println("Inserisci il nome della classe:");
@@ -47,6 +69,11 @@ public class UI {
         return new Classroom(name, teacher);
     }
 
+    /**
+     * Crea una nuova scuola chiedendo all'utente di inserire il nome.
+     *
+     * @return La scuola creata.
+     */
     public School createSchool() {
         Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8.name());
         System.out.println("\nInserisci il nome della scuola:");

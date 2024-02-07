@@ -101,7 +101,8 @@
                 </executions>
             </plugin>
 
-            <!--static analysis-->
+            <!--static analysis
+            target\checkstyle-result.xml"-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -119,7 +120,8 @@
                 </configuration>
             </plugin>
 
-            <!--spotbug, mvn spotbugs:check -->
+            <!--spotbug, mvn spotbugs:check
+            \target\site\spotbugs.xml-->
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
@@ -138,7 +140,8 @@
                 </configuration>
             </plugin>
 
-            <!-- Creating an executable JAR file during the Maven build process -->
+            <!-- Creating an executable JAR file during the Maven build process
+            target\progetto-1.0-SNAPSHOT.jar"-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>

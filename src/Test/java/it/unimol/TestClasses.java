@@ -7,7 +7,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * La classe TestClasses contiene una serie di test JUnit per le classi Student, Teacher e Classroom.
+ */
 public class TestClasses {
+
+    /**
+     * Test per la classe Student.
+     */
     @Test
     public void testStudent() {
         // Creazione di uno studente e verifica dei suoi attributi
@@ -17,14 +24,21 @@ public class TestClasses {
         assertEquals("Rossi", student.getSurname());
     }
 
+    /**
+     * Test per la classe Teacher.
+     */
     @Test
     public void testTeacher() {
+        // Creazione di un insegnante e verifica dei suoi attributi
         Teacher teacher = new Teacher("Prof. Bianchi", 1, "Scienze");
         assertEquals("Prof. Bianchi", teacher.getName());
         assertEquals(1, teacher.getId());
         assertEquals("Scienze", teacher.getSubject());
     }
 
+    /**
+     * Test per la classe Classroom.
+     */
     @Test
     public void testClass() {
         // Creazione di un insegnante
