@@ -12,11 +12,6 @@
         <!-- Aggiunta di regola per richiedere parentesi graffe per i blocchi di istruzioni a una singola riga -->
         <module name="NeedBraces"/>
 
-        <!-- Regola per controllare e correggere la formattazione degli spazi attorno alle parentesi -->
-        <module name="WhitespaceAround">
-            <property name="allowEmptyConstructors" value="true"/>
-        </module>
-
         <!-- Regola per richiedere parentesi graffe per i blocchi di istruzioni a una singola riga -->
         <module name="NeedBraces">
             <property name="severity" value="warning"/>

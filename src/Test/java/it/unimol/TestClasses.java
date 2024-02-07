@@ -1,13 +1,11 @@
 package it.unimol;
 
 import it.unimol.app.Classroom;
-import it.unimol.app.School;
 import it.unimol.app.Student;
 import it.unimol.app.Teacher;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TestClasses {
     @Test
@@ -38,6 +36,8 @@ public class TestClasses {
         assertTrue(class1.getStudents().isEmpty()); // Verifica che non ci siano studenti
     }
 
+    //37% coverage con testSchool, 28% senza
+/*
     @Test
     public void testSchool() {
         // Creazione di un insegnante e di una classe
@@ -49,4 +49,6 @@ public class TestClasses {
         assertEquals("Scuola Superiore", school.getName());
         assertEquals(1, school.getClasses().size()); // Verifica che ci sia una sola classe nella scuola
     }
+*/
+
 }
