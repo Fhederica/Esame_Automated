@@ -18,5 +18,5 @@ WORKDIR /Esame_Automated
 #Compila il progetto Maven
 RUN mvn package
 
-#Eseguire il progetto
+#Esegue il progetto
 CMD [ "java", "-jar", "target/progetto-1.0-SNAPSHOT.jar" ]
