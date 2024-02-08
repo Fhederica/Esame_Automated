@@ -33,7 +33,6 @@ public class UI {
         System.out.println("Inserisci il codice dello studente:");
         int code = scanner.nextInt();
         scanner.nextLine();
-        scanner.close();
         return new Student(name, code, surname);
     }
 
@@ -51,7 +50,6 @@ public class UI {
         System.out.println("Inserisci l'ID del docente:");
         int id = scanner.nextInt();
         scanner.nextLine();
-        scanner.close();
         return new Teacher(name, id, subject);
     }
 
@@ -65,7 +63,6 @@ public class UI {
         Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8.name());
         System.out.println("Inserisci il nome della classe:");
         String name = scanner.nextLine();
-        scanner.close();
         return new Classroom(name, teacher);
     }
 
@@ -78,7 +75,6 @@ public class UI {
         Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8.name());
         System.out.println("\nInserisci il nome della scuola:");
         String name = scanner.nextLine();
-        scanner.close();
         return new School(name);
     }
 }
